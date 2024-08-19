@@ -4,18 +4,20 @@
     <div th:replace="fragments/head :: head"></div>
     <title>Detalle del Paciente</title>
 </head>
-<body>
+<body class="bg-info p-2 text-dark bg-opacity-25 d-flex flex-column min-vh-100">
 <div th:replace="fragments/header :: header"></div>
-<div class="container">
+<div class="container mt-120">
     <h2>Detalles del Paciente</h2>
-    <p><strong>ID:</strong> <span th:text="${paciente.id}"></span></p>
+    <p class="mt-60"><strong>ID:</strong> <span th:text="${paciente.id}"></span></p>
     <p><strong>Nombre:</strong> <span th:text="${paciente.nombre}"></span></p>
     <p><strong>Apellido:</strong> <span th:text="${paciente.apellido}"></span></p>
     <p><strong>Diagnóstico:</strong> <span th:text="${paciente.diagnostico}"></span></p>
     <p><strong>Fecha de Ingreso:</strong> <span th:text="${paciente.fecha_ingreso}"></span></p>
     <p><strong>Habitación:</strong> <span th:text="${paciente.habitacion}"></span></p>
-    <a th:href="@{/pacientes}" class="btn btn-primary">Volver a la lista</a>
+    <a th:href="@{/pacientes}" class="btn btn-primary mt-60">Volver a la lista</a>
 </div>
-<div th:replace="fragments/footer :: footer"></div>
+    <div class="mt-auto">
+        <th:block th:replace="fragments/footer :: footer"></th:block>
+    </div>
 </body>
 </html>
