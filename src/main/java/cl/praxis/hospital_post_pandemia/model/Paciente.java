@@ -26,7 +26,7 @@ public class Paciente {
     @Column(name = "diagnostico", nullable = false, length = 254)
     private String diagnostico;
 
-    @Column(name = "fecha_ingreso", nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    @Column(name = "fecha_ingreso", nullable = false)
     private String fecha_ingreso;
 
     @Column(name = "habitacion", nullable = false, length = 5)
